@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - uses: SonarSource/sonarqube-scan-action@v4
+      - uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
@@ -54,5 +54,5 @@ jobs:
       - name: "Docker Pull and Restart Docker"
         run: |
           ssh -t ubuntu@$SERVER_IP -i mykey.pem 'docker pull paudelsandesh240/portfolio'
-          ssh -t ubuntu@$SERVER_IP -i mykey.pem 'docker stop portfolio && docker rm portfolio'
-          ssh -t ubuntu@$SERVER_IP -i mykey.pem 'docker run --name portfolio -p 8000:80 -d paudelsandesh240/portfolio'
+          ssh -t ubuntu@$SERVER_IP -i mykey.pem 'docker stop my-portfolio && docker rm my-portfolio'
+          ssh -t ubuntu@$SERVER_IP -i mykey.pem 'docker run --name my-portfolio -p 8000:80 -d paudelsandesh240/portfolio'
