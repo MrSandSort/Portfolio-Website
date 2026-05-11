@@ -9,7 +9,7 @@ export function SkillsSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Skills"
-          title="Technologies and e"
+          title="Technologies and expertise"
           description="I bias toward technologies that keep teams fast, systems observable, and architecture flexible enough to evolve without expensive rewrites."
         />
 
