@@ -65,7 +65,7 @@ export function ContactForm() {
     window.location.href = `mailto:${profile.email}?subject=${subject}&body=${body}`;
     setStatus({
       type: "success",
-      message: "Your default mail client should open with a prefilled message." 
+      message: "That should open with a prefilled message." 
     });
     setForm(initialState);
   }
