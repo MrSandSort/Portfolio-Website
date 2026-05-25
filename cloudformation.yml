@@ -116,6 +116,20 @@ Resources:
         - Key: Name
           Value: PortfolioInstance
 
+      UserData: 
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          apt update -y
+          apt install docker.io -y
+
+          systemctl enable docker
+          systemctl start docker
+
+          usermod -aG docker ubuntu
+
+          docker pull paudelsandesh240/portfolio
+          docker run --name portfolio-sandesh -p 80:3000 -d paudelsandesh240/portfolio
+
   ElasticIP:
     Type: AWS::EC2::EIP
     Properties:
