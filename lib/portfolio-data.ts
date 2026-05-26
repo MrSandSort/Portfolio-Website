@@ -41,7 +41,7 @@ export const navigation = [
 ];
 
 export const profile: Profile = {
-  name: "Sandesh Prasad Paudel",
+  name: "Sandesh",
   role: "IT Tutor | Backend Developer | DevOps Enthusiast",
   tagline:
     "I build reliable platforms that turn messy operational problems into measurable business outcomes.",
