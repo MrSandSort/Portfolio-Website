@@ -28,7 +28,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <a href="#contact" className="button-secondary hidden sm:inline-flex">
-            Contact Me, Sandesh
+            Contact Me
           </a>
           <button
             type="button"
